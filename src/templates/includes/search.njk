@@ -1,0 +1,17 @@
+<form action="/search" method="get" class="form form--search-jobs">
+  <label class="visually-hidden" for="keyword">Keyword</label>
+  <input type="text" placeholder="Keyword (e.g. Manager)" name="keyword" value="asdasd">
+
+  <label class="visually-hidden" for="location">Location</label>
+  <input type="text"  placeholder="Location (e.g. Boston)" name="location">
+
+  <label class="visually-hidden" for="radius">Search radius</label>
+  <select name="radius">
+    {% for option in searchRadiusOptions %}
+      <option value="{{ option.value }}">{{ option.text }}</option>
+    {% endfor %}
+  </select>
+
+  <label class="visually-hidden" for="submit">Submit search</label>
+  <input class="button button--brand-secondary" type="submit" id="submit" value="Search">
+</form>

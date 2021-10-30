@@ -1,0 +1,24 @@
+.skip-to-content {
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 0
+}
+
+.skip-to-content a {
+  background-color: #eee;
+  border: 5px solid #ccc;
+  font-size: 120%;
+  font-weight: 700;
+  left: -10000px;
+  padding: 10px 15px;
+  position: absolute;
+  text-align: center;
+  width: 10em;
+  border-radius: 3px
+}
+
+.skip-to-content a:focus {
+  left: 0;
+  z-index: 1000
+}

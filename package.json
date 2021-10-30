@@ -1,0 +1,30 @@
+{
+  "name": "fed-practical",
+  "version": "1.0.0",
+  "description": "Front-End practical exercise",
+  "main": "./server/index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "debug": "node --inspect ./node_modules/.bin/gulp",
+    "dev": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Wragg <james.wragg@madgex.com> (https://madgex.com)",
+  "license": "MIT",
+  "dependencies": {
+    "blipp": "^4.0.1",
+    "@hapi/hapi": "^19.2.0",
+    "@hapi/inert": "^6.0.2",
+    "@hapi/vision": "^6.0.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "nodemon": "^2.0.4"
+  }
+}

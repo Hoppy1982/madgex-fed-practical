@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title | default(pageTitle) }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <script src="/public/js/util.js" async></script>
+    <script src="/public/js/nav.js" async></script>
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    {% block bodyStart %}{% endblock %}
+
+      <p class="skip-to-content"><a accesskey="S" title="Access key: S" href="#main">Skip to main content</a></p>
+      
+      {% block header %}
+      <header>
+        <div class="account-bar">
+            <div class="wrapper">
+                <div class="account-bar__inner">
+                    <a href="#">Visit PxlPro.com</a>
+                    <div>
+                        <a href="#">Sign in</a>
+                        <a href="#" class="u-hide-x-small">Create account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper--page-header">
+            <div class="page-header">
+                <img src="{{ assetPath }}/images/logo.png" alt="Pxl Pro Jobs Logo" class="page-header__logo">
+                {% include 'includes/navigation.njk' %}
+            </div>
+        </div>
+      </header>
+      {% endblock %}
+      
+      {% block main %}
+      <main role="main" class="main" id="main">
+          {% block content %}{% endblock %}
+      </main>
+      {% endblock %}
+      
+      {% block footer %}
+      <footer>
+      </footer>
+      {% endblock %}
+
+      {% block bodyEnd %}{% endblock %}
+  </body>
+
+</html>

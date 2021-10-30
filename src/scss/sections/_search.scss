@@ -1,0 +1,43 @@
+.search-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 32px;
+}
+
+.form--search-jobs {
+  display: flex;
+  justify-content: center;
+
+  & > input,select {
+    border: 0;
+
+    &:not(:last-child) {
+      margin-right: $spacing-unit;
+    }
+  }
+
+  & > input[type="text"],
+  & > select {
+    padding-left: 10px;
+  }
+
+  & > input[type="text"] {
+    flex: 1 1 auto;
+  }
+}
+
+
+
+
+@media screen and (max-width: $breakpoint-small) {
+  .form--search-jobs {
+    flex-direction: column;
+
+    & > input,select {
+      &:not(:last-child) {
+        padding: 8px 32px;
+        margin-right: 0;
+        margin-bottom: $spacing-unit;
+      }
+    }
+  }
+}

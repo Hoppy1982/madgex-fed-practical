@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'normalize';
+@import 'buttons';
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: 500;
+  src: url('../fonts/ProximaNova-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: 700;
+  src: url('../fonts/ProximaNova-Bold.woff') format('woff');
+}
+
+body {
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial sans-serif;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+a {
+  color: $color-brand;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'ProximaNova';
+}
+
+@import 'utilities';
+@import 'components/skip-link';
+@import 'components/account-bar';
+@import 'components/page-header';
+@import 'components/nav';
+
+@import 'sections/hero';
+@import 'sections/search';

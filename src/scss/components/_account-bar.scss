@@ -1,0 +1,29 @@
+.account-bar {
+  background: $color-brand;
+  font-family: "ProximaNova";
+  padding: 6px 0;
+
+  a {
+    color: white;
+
+    & + a {
+      margin-left: 27px;
+    }
+  }
+}
+
+.account-bar__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: $breakpoint-x-small) {
+  .account-bar__inner {
+    flex-direction: column;
+    & div {
+      text-align: right;
+    }
+  }
+}

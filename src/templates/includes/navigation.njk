@@ -1,0 +1,13 @@
+<nav>
+    <button id="nav-button" class="hidden button--nav">
+        <span class="visually-hidden">Nav menu</span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+    </button>
+    <ul class="page-nav u-reset-list">
+    {% for item in navItems %}
+        <li class="page-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+    {% endfor %}
+    </ul>
+    <a class="button button--brand button--switch-site" href="#recruiters">Advertise a job</a>
+</nav>

@@ -1,0 +1,136 @@
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: $spacing-unit;
+}
+
+.button--nav {
+  display: none;
+  align-self: flex-end;
+  margin-right: $spacing-unit;
+  height: 32px;
+  width: 32px;
+  background: transparent;
+  border: 0;
+
+  &:hover, &:focus {
+    cursor: pointer;
+  }
+}
+.hamburger {
+  display: inline-block;
+  background-color: #000;
+  width: 100%;
+  height: 6px;
+  transition: transform ease-in-out 0.1s;
+
+  nav:not(.js-closed) &:nth-child(2) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  nav:not(.js-closed) &:nth-child(3) {
+    transform: translateY(-8px)  rotate(-45deg);
+  }
+}
+
+.button--switch-site {
+  margin-left: $spacing-unit;
+  white-space: nowrap;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.page-nav__item {
+  display: inline-block;
+  font-family: "ProximaNova";
+  font-weight: 500;
+  white-space: nowrap;
+  & a {
+    display: inline-block;
+  }
+  & a::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: $color-brand-secondary;
+    transition: width ease-in-out 0.2s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & a:hover,
+  & a:focus {
+    text-decoration: none;
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: $breakpoint-small) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: auto;
+    right: 0;
+    top: 0;
+    background: #fff;
+    margin-left: 0;
+    padding: $spacing-unit 0;
+  }
+
+  .js-enabled .button--nav {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+
+  .page-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+
+  .page-nav__item {
+    margin: 4px 0;
+    width: 100%;
+    border-bottom: 1px solid $color-grey;
+    padding: 4px $spacing-unit;
+  }
+
+  .button--switch-site {
+    color: #000;
+    background-color: #fff;
+    font-weight: 700;
+    padding-left: 0;
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  .js-closed {
+    & .page-nav, .button--switch-site {
+      display: none;
+    }
+  }
+}

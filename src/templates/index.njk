@@ -1,0 +1,17 @@
+{% extends 'layouts/furniture.njk' %}
+
+{% block content %}
+  <section class="section section--hero">
+    <div class="wrapper hero-text">
+      <h1>{{ heroMessage }}</h1>
+      <p>{{ heroSubMessage }}</p>
+    </div>
+
+    <div class="search-bg">
+      <div class="wrapper">
+        {% include 'includes/search.njk' %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

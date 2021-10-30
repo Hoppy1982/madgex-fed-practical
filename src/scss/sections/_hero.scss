@@ -1,0 +1,21 @@
+.section--hero {
+  background-color: $color-grey;
+  background-image: url(../../../public/images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.section--hero .hero-text {
+  padding: 180px $page-padding;
+  padding: clamp(80px, 10vw, 180px) $page-padding;
+
+  h1, p {
+    margin: 0;
+  }
+
+  p {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,27 @@
+.wrapper--page-header {
+  position: relative;
+}
+
+.page-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+
+  @media screen and (max-width: $breakpoint-small) {
+    align-items: flex-start;
+  }
+
+  a:not(.button) {
+    color: inherit;
+  }
+}
+
+.page-header__logo {
+  max-width: 190px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 40%;
+  }
+}
+

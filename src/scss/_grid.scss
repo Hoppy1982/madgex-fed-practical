@@ -1,0 +1,49 @@
+.grid {
+  font-size: 0;
+  list-style-type: none;
+  margin-bottom: -20px;
+  margin-left: -20px;
+  padding: 0;
+}
+
+.grid__item {
+  display: inline-block;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  vertical-align: top;
+  width: 100%;
+}
+
+// Allow equal height grid items
+.grid--flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Column Widths
+$column-count: 12;
+@for $i from 1 through $column-count {
+  $width: percentage($i/$column-count);
+  .col-#{$i} {
+    width: $width;
+  }
+}
+
+@for $i from 1 through $column-count {
+  $width: percentage($i/$column-count);
+  .col-medium-#{$i} {
+    @media (min-width: $breakpoint-small + 1) {
+      width: $width;
+    }
+  }
+}
+
+@for $i from 1 through $column-count {
+  $width: percentage($i/$column-count);
+  .col-large-#{$i} {
+    @media (min-width: $breakpoint-medium + 1) {
+      width: $width;
+    }
+  }
+}

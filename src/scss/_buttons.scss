@@ -1,0 +1,30 @@
+.button {
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 32px;
+  border: 0;
+  border-radius: 4px;
+  transition: background-color ease-in-out 0.3s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &--brand {
+    background-color: $color-brand;
+    &:hover,
+    &:focus {
+      background-color: darken($color-brand, 20%);
+    }
+  }
+
+  &--brand-secondary {
+    background-color: $color-brand-secondary;
+    &:hover,
+    &:focus {
+      background-color: darken($color-brand-secondary, 20%);
+    }
+  }
+}
