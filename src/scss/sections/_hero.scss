@@ -1,4 +1,4 @@
-.section--hero {
+.hero-section {
   background-color: $color-grey;
   background-image: url(../../../public/images/hero.png);
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.section--hero .hero-text {
+.hero-section__text {
   padding: 180px $page-padding;
   padding: clamp(80px, 10vw, 180px) $page-padding;
 

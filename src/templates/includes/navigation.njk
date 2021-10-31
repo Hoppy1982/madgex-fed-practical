@@ -1,12 +1,12 @@
-<nav>
-    <button id="nav-button" class="hidden button--nav">
-        <span class="visually-hidden">Nav menu</span>
-        <span class="hamburger"></span>
-        <span class="hamburger"></span>
+<nav aria-label="main" class="main-nav">
+    <button id="main-nav-toggle" class="hidden main-nav__toggle">
+        <span class="main-nav__hamburger"></span>
+        <span class="main-nav__hamburger"></span>
+        <span class="main-nav__hamburger"></span>
     </button>
-    <ul class="page-nav u-reset-list">
+    <ul class="main-nav__int-items u-reset-list">
     {% for item in navItems %}
-        <li class="page-nav__item"><a href="{{ item.href }}">{{ item.label }}</a></li>
+        <li class="main-nav__int-item"><a href="{{ item.href }}">{{ item.label }}</a></li>
     {% endfor %}
     </ul>
     <a class="button button--brand button--switch-site" href="#recruiters">Advertise a job</a>

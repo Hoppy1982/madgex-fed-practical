@@ -1,10 +1,13 @@
+const IndexPageModel = require('../data/index-page-model');
+const SearchPageModel = require('../data/search-page-model');
+
 module.exports = [
   {
     method: 'GET',
     path: '/',
     handler: function (request, h) {
       return h.view('index', {
-        message: 'Hello world',
+        pageModel: IndexPageModel
       });
     },
     options: {
@@ -27,11 +30,12 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/search',
+    path: '/find-a-job',
     handler: function (request, h) {
       const { keyword, location, radius } = request.query;
       // TODO - Sanitize & validate input, get matching jobs and return them in response
-      return h.view('search', {
+      return h.view('find-a-job', {
+        pageModel: SearchPageModel,
         searchParams: `keyword: ${keyword}, location: ${location}, radius: ${radius}`,
       });
     },

@@ -5,7 +5,7 @@
 
   function navInit() {
     var nav = document.querySelector('nav');
-    var navButton =  document.querySelector('#nav-button');
+    var navButton =  document.querySelector('#main-nav-toggle');
     nav.classList.add('js-closed');
 
     function navToggle() {

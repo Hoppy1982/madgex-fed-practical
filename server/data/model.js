@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       label: 'Find a job',
-      href: '/search',
+      href: '/find-a-job',
     },
     {
       label: 'Careers advice',
